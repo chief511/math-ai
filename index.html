@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数学组AI助手</title>
+<style>
+body{font-family:Arial;padding:20px;}
+input,button{width:100%;padding:10px;margin-top:10px;}
+</style>
+</head>
+
+<body>
+
+<h2>数学组AI家长反馈助手</h2>
+
+<input id="name" placeholder="学生姓名">
+
+<input id="grade" placeholder="年级">
+
+<input id="score" placeholder="成绩">
+
+<input id="problem" placeholder="主要问题">
+
+<button onclick="generate()">生成反馈</button>
+
+<p id="result"></p >
+
+<script>
+
+function generate(){
+
+let name=document.getElementById("name").value
+let score=document.getElementById("score").value
+let problem=document.getElementById("problem").value
+
+let text=name+"同学本次数学成绩为"+score+"分，整体学习态度良好。从试卷情况来看，主要问题集中在"+problem+"部分。建议接下来加强相关题型练习，同时整理错题进行复盘。"
+
+document.getElementById("result").innerText=text
+
+}
+
+</script>
+
+</body>
+</html>
